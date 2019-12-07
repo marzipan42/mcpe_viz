@@ -79,7 +79,7 @@ else()
   endif()
 endif()
 
-add_executable(mcpe_viz mcpe_viz.cc mcpe_viz.xml.cc mcpe_viz.nbt.cc mcpe_viz.util.cc)
+add_executable(mcpe_viz mcpe_viz.cc mcpe_viz.xml.cc mcpe_viz.nbt.cc mcpe_viz.util.cc getopt.c)
 
 find_package(PNG REQUIRED)
 find_package(ZLIB REQUIRED)
