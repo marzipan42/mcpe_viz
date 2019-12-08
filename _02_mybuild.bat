@@ -128,3 +128,37 @@ copy ..\libpng\x64\libpng16.dll Release
 copy ..\libxml2\x64\libxml2.dll Release
 copy ..\leveldb-mcpe\x64\Release\leveldb.dll Release
 cd ..
+
+mkdir mcpe_viz_helper.win32
+copy mcpe_viz_helper_win_builds\Win32\* mcpe_viz_helper.win32
+copy build32\Release\leveldb.dll mcpe_viz_helper.win32
+copy build32\Release\libpng16.dll mcpe_viz_helper.win32
+copy build32\Release\libxml2.dll mcpe_viz_helper.win32
+copy build32\Release\mcpe_viz.exe mcpe_viz_helper.win32
+copy build32\Release\zlib.dll mcpe_viz_helper.win32
+xcopy /i images mcpe_viz_helper.win32\images
+xcopy /i js mcpe_viz_helper.win32\js
+copy mcpe_viz.cfg mcpe_viz_helper.win32
+copy mcpe_viz.css mcpe_viz_helper.win32
+copy mcpe_viz.js mcpe_viz_helper.win32
+copy mcpe_viz.xml mcpe_viz_helper.win32
+copy mcpe_viz.html.template mcpe_viz_helper.win32
+copy LICENSE mcpe_viz_helper.win32\LICENSE.txt
+copy README.md mcpe_viz_helper.win32\README.txt
+
+mkdir mcpe_viz_helper.win64
+copy mcpe_viz_helper_win_builds\x64\* mcpe_viz_helper.win64
+copy build64\Release\leveldb.dll mcpe_viz_helper.win64
+copy build64\Release\libpng16.dll mcpe_viz_helper.win64
+copy build64\Release\libxml2.dll mcpe_viz_helper.win64
+copy build64\Release\mcpe_viz.exe mcpe_viz_helper.win64
+copy build64\Release\zlib.dll mcpe_viz_helper.win64
+xcopy /i images mcpe_viz_helper.win64\images
+xcopy /i js mcpe_viz_helper.win64\js
+copy mcpe_viz.cfg mcpe_viz_helper.win64
+copy mcpe_viz.css mcpe_viz_helper.win64
+copy mcpe_viz.js mcpe_viz_helper.win64
+copy mcpe_viz.xml mcpe_viz_helper.win64
+copy mcpe_viz.html.template mcpe_viz_helper.win64
+copy LICENSE mcpe_viz_helper.win64\LICENSE.txt
+copy README.md mcpe_viz_helper.win64\README.txt
