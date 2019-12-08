@@ -113,12 +113,18 @@ mkdir build32
 cd build32
 cmake -A Win32 -DMCPE_VIZ_WIN32=ON -DZLIB_LIBRARY=..\zlib\Win32\zlib.lib -DZLIB_INCLUDE_DIR=..\zlib\include -DPNG_LIBRARY=..\libpng\Win32\libpng16.lib -DPNG_PNG_INCLUDE_DIR=..\libpng\include -DLIBXML2_LIBRARY=..\libxml2\Win32\libxml2.lib -DLIBXML2_INCLUDE_DIR=..\libxml2\include ..
 msbuild mcpe_viz.sln -m -t:Rebuild -p:Configuration=Release -p:Platform=Win32
-copy ..\zlib\Win32\zlib.dll ..\libpng\Win32\libpng16.dll ..\libxml2\Win32\libxml2.dll ..\leveldb-mcpe\Win32\Release\leveldb.dll Release
+copy ..\zlib\Win32\zlib.dll Release
+copy ..\libpng\Win32\libpng16.dll Release
+copy ..\libxml2\Win32\libxml2.dll Release
+copy ..\leveldb-mcpe\Win32\Release\leveldb.dll Release
 cd ..
 
 mkdir build64
 cd build64
 cmake -A x64 -DMCPE_VIZ_WIN64=ON -DZLIB_LIBRARY=..\zlib\x64\zlib.lib -DZLIB_INCLUDE_DIR=..\zlib\include -DPNG_LIBRARY=..\libpng\x64\libpng16.lib -DPNG_PNG_INCLUDE_DIR=..\libpng\include -DLIBXML2_LIBRARY=..\libxml2\x64\libxml2.lib -DLIBXML2_INCLUDE_DIR=..\libxml2\include ..
 msbuild mcpe_viz.sln -m -t:Rebuild -p:Configuration=Release -p:Platform=x64
-copy ..\zlib\x64\zlib.dll ..\libpng\x64\libpng16.dll ..\libxml2\x64\libxml2.dll ..\leveldb-mcpe\x64\Release\leveldb.dll Release
+copy ..\zlib\x64\zlib.dll Release
+copy ..\libpng\x64\libpng16.dll Release
+copy ..\libxml2\x64\libxml2.dll Release
+copy ..\leveldb-mcpe\x64\Release\leveldb.dll Release
 cd ..
