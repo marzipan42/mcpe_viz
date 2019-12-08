@@ -95,6 +95,7 @@ mkdir build64
 cd build64
 cmake -A x64 -DZLIB_LIBRARY=..\..\zlib\x64\zlib.lib -DZLIB_INCLUDE_DIR=..\..\zlib\include -DCMAKE_INSTALL_PREFIX=install -DNBT_BUILD_TESTS=OFF ..
 msbuild libnbt++.sln -m -t:Rebuild -p:Configuration=Release -p:Platform=x64
+copy nbt_export.h ..\include
 cd ..
 
 cd ..

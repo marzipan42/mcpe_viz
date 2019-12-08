@@ -20,6 +20,7 @@ rmdir /s /q libxml2
 cd libnbtplusplus
 rmdir /s /q build32
 rmdir /s /q build64
+del include\nbt_export.h
 cd ..
 
 cd leveldb-mcpe
