@@ -17,7 +17,7 @@ Compilation tested on: Windows 10 64-bit v1909, Visual Studio 2019 Professional 
 To build, do the following from a cmd.exe window:
 * git clone https://github.com/marzipan42/mcpe_viz.git
 * cd mcpe_viz
-* powershell .\_01_mygetdeps.ps1
+* powershell .\\_01_mygetdeps.ps1
   * downloads leveldb-mcpe, libnbtplusplus, libxml2, libpng, zlib
 * _02_mybuild.bat > mybuildlog.txt 2>&1
   * builds dependencies and mcpe_viz, final output goes in mcpe_viz_helper.win32 and mcpe_viz_helper.win64 directories
