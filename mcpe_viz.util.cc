@@ -69,15 +69,6 @@ namespace mcpe_viz {
 
   
   // these hacks work around "const char*" problems
-  std::string mydirname( const std::string& fn ) {
-    char tmpstring[1025];
-    memset(tmpstring,0,1025);
-    _splitpath(fn.c_str(), tmpstring, tmpstring+2, NULL, NULL);
-    tmpstring[1] = ':';
-    std::string ret( tmpstring );
-    return ret;
-  }
-
   std::string mybasename( const std::string& fn ) {
     char tmpstring[1025];
     char tmpstring2[1025];
@@ -85,6 +76,15 @@ namespace mcpe_viz {
     memset(tmpstring2, 0, 1025);
     _splitpath(fn.c_str(), NULL, NULL, tmpstring, tmpstring2);
     strcat(tmpstring, tmpstring2);
+    std::string ret( tmpstring );
+    return ret;
+  }
+
+  std::string mydirname( const std::string& fn ) {
+    char tmpstring[1025];
+    memset(tmpstring,0,1025);
+    _splitpath(fn.c_str(), tmpstring, tmpstring+2, NULL, NULL);
+    tmpstring[1] = ':';
     std::string ret( tmpstring );
     return ret;
   }
